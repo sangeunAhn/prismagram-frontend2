@@ -46,7 +46,7 @@ export default () => {
           } = await requestSecretMutation();
           if (!requestSecret) {
             toast.error("You dont have an account yet, create one");
-            setTimeout(() => setAction("signUp"), 3000);
+            setTimeout(() => setAction("signUp"), 2000);
           } else {
             toast.success("Check your inbox for your login secret");
             setAction("confirm");
@@ -72,7 +72,7 @@ export default () => {
             toast.error("Can't create account");
           } else {
             toast.success("Account created! Log In now");
-            setTimeout(() => setAction("logIn"), 3000);
+            setTimeout(() => setAction("logIn"), 2000);
           }
         } catch (e) {
           toast.error(e.message);
