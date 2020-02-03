@@ -48,7 +48,7 @@ export default () => {
             toast.error("You dont have an account yet, create one");
             setTimeout(() => setAction("signUp"), 1000);
           } else {
-            toast.success("Check your inbox for your login secret");
+            toast.success("Check your email for your login secret");
             setAction("confirm");
           }
         } catch {
